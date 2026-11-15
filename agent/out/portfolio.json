@@ -102,6 +102,6 @@
       "value_usd": 8333.3
     }
   ],
-  "valued_at": "2026-11-15T16:28:50.733310+00:00",
+  "valued_at": "2026-11-15T16:31:41.037666+00:00",
   "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
 }

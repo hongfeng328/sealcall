@@ -6,7 +6,8 @@ without NAV has no usable price and is excluded). Nothing is hardcoded.
 
 Each brief is a structured JSON dict:
   ticker, name, contract_address, nav_price, nav_updated_at,
-  nav_age_seconds, nav_stale (vs the engine threshold), total_supply,
+  nav_age_seconds, nav_stale (vs the NYSE-calendar policy in
+  data/market_calendar.py), total_supply,
   multiplier, corporate_actions, momentum_pct (vs the previous engine
   snapshot, when one exists), brief_text, generated_at.
 
@@ -26,12 +27,13 @@ from datetime import datetime, timezone
 from typing import Any, Optional
 
 from data.client import TokenizedStocksClient, TokenRecord
+from data.market_calendar import MAX_MARKET_AGE_SECONDS, nav_freshness
 
-# Engine staleness bound. The phase-1 client default (24h) flags every
-# quote on weekends because NAV feeds freeze outside US market hours.
-# Until a real US-market-calendar policy lands, the engine tolerates a
-# long-weekend span (96h) while still reporting the raw age verbatim.
-ENGINE_NAV_MAX_AGE_SECONDS = 96 * 3600
+# Engine staleness policy (phase 3): NYSE-calendar-aware, see
+# data/market_calendar.py. Age is measured in market-open seconds, so a
+# quote frozen at Friday's close stays fresh all weekend, while a quote
+# that has sat through > MAX_MARKET_AGE_SECONDS of live trading is
+# stale. The raw wall-clock age is still reported verbatim.
 
 HISTORY_FILENAME = "nav_history.json"
 
@@ -85,7 +87,13 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
                 fetch_metadata: bool = True) -> dict:
     """Build one structured research brief for a universe token."""
     now = now or datetime.now(timezone.utc)
-    quote = client.get_nav(record, max_age_seconds=ENGINE_NAV_MAX_AGE_SECONDS, now=now)
+    quote = client.get_nav(record, now=now)
+    # Calendar-aware verdict supersedes the client's fixed-hour bound:
+    # a present quote is stale only if too much *open-market* time has
+    # passed since it was stamped; a missing quote is always unusable.
+    fresh = (nav_freshness(quote.updated_at, now)
+             if quote.present and quote.updated_at is not None else None)
+    nav_stale = (not quote.present) or (fresh is not None and not fresh.is_fresh)
     metadata: Optional[dict] = None
     metadata_error: Optional[str] = None
     if fetch_metadata:
@@ -102,11 +110,13 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
     actions = _corporate_actions(record, metadata)
     momentum = _find_momentum(history, record.symbol, record.nav_price)
     age_h = (quote.age_seconds or 0) / 3600.0
+    market_age_h = ((fresh.market_age_seconds if fresh else 0) or 0) / 3600.0
     lines = [
         f"{record.name} ({record.symbol}): NAV reference "
         f"{record.nav_price} (Chainlink reference value, not a live quote), "
         f"last updated {record.nav_price_updated_at} "
-        f"({age_h:.1f}h ago, stale={not quote.is_fresh} vs 96h engine bound).",
+        f"({age_h:.1f}h wall age, {market_age_h:.1f}h market-open age, "
+        f"stale={nav_stale} per nyse-calendar-v1).",
         f"Token supply {supply}; share-to-token multiplier {record.multiplier}.",
     ]
     if actions:
@@ -126,8 +136,10 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
         "nav_price": record.nav_price,
         "nav_updated_at": record.nav_price_updated_at,
         "nav_age_seconds": quote.age_seconds,
-        "nav_stale": not quote.is_fresh,
-        "nav_max_age_seconds": ENGINE_NAV_MAX_AGE_SECONDS,
+        "nav_stale": nav_stale,
+        "nav_freshness_policy": "nyse-calendar-v1",
+        "nav_market_age_seconds": fresh.market_age_seconds if fresh else None,
+        "nav_max_market_age_seconds": MAX_MARKET_AGE_SECONDS,
         "total_supply": supply,
         "multiplier": record.multiplier,
         "corporate_actions": actions,

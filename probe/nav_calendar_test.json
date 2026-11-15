@@ -1,0 +1,64 @@
+{
+  "probe": "sealcall-nav-calendar-test",
+  "policy": "nyse-calendar-v1 (data/market_calendar.py)",
+  "ran_at_utc": "2026-11-15T16:31:36.500567+00:00",
+  "scenarios": [
+    {
+      "name": "weekend_freeze",
+      "description": "NAV stamped Fri 2026-11-13 15:55 ET (just before the close); evaluated Sun 2026-11-15 11:30 ET. Market closed the whole weekend: freeze is not staleness.",
+      "updated_at_utc": "2026-11-13T20:55:00+00:00",
+      "now_utc": "2026-11-15T16:30:00+00:00",
+      "wall_age_hours": 43.583,
+      "market_age_hours": 0.083,
+      "max_market_age_hours": 4.0,
+      "calendar_is_fresh": true,
+      "expected_is_fresh": true,
+      "match": true,
+      "retired_fixed_24h_is_fresh": false,
+      "retired_fixed_96h_is_fresh": true
+    },
+    {
+      "name": "open_market_fresh",
+      "description": "NAV stamped Wed 2026-11-18 10:15 ET, evaluated same session 11:00 ET: 45 minutes of open-market age, well within the 4h bound.",
+      "updated_at_utc": "2026-11-18T15:15:00+00:00",
+      "now_utc": "2026-11-18T16:00:00+00:00",
+      "wall_age_hours": 0.75,
+      "market_age_hours": 0.75,
+      "max_market_age_hours": 4.0,
+      "calendar_is_fresh": true,
+      "expected_is_fresh": true,
+      "match": true,
+      "retired_fixed_24h_is_fresh": true,
+      "retired_fixed_96h_is_fresh": true
+    },
+    {
+      "name": "open_market_stale",
+      "description": "NAV stamped Mon 2026-11-16 15:00 ET, evaluated Wed 2026-11-18 14:00 ET: it has sat through 1h (Mon) + 6.5h (Tue) + 4.5h (Wed) = 12h of live trading without updating -> stale.",
+      "updated_at_utc": "2026-11-16T20:00:00+00:00",
+      "now_utc": "2026-11-18T19:00:00+00:00",
+      "wall_age_hours": 47.0,
+      "market_age_hours": 12.0,
+      "max_market_age_hours": 4.0,
+      "calendar_is_fresh": false,
+      "expected_is_fresh": false,
+      "match": true,
+      "retired_fixed_24h_is_fresh": false,
+      "retired_fixed_96h_is_fresh": true
+    },
+    {
+      "name": "holiday_freeze",
+      "description": "Bonus: NAV stamped Wed 2026-11-25 15:55 ET; evaluated Fri 2026-11-27 09:00 ET (pre-open on the early-close day). Thanksgiving Day (Thu) the exchange was closed, so the quote is still fresh.",
+      "updated_at_utc": "2026-11-25T20:55:00+00:00",
+      "now_utc": "2026-11-27T14:00:00+00:00",
+      "wall_age_hours": 41.083,
+      "market_age_hours": 0.083,
+      "max_market_age_hours": 4.0,
+      "calendar_is_fresh": true,
+      "expected_is_fresh": true,
+      "match": true,
+      "retired_fixed_24h_is_fresh": false,
+      "retired_fixed_96h_is_fresh": true
+    }
+  ],
+  "verdict": "PASS"
+}

@@ -13,7 +13,34 @@ const rows = (tbody, cellsList) => {
     .join("");
 };
 
+async function renderSepolia() {
+  const el = document.getElementById("sepolia");
+  try {
+    const d = await fetch("../probe/sepolia_deploy.json").then((r) => r.json());
+    const addrLink =
+      `<a href="${d.explorer}/address/${d.deployer_address}">${d.deployer_address}</a>`;
+    if (d.status === "DEPLOYED" && d.contracts) {
+      const c = Object.entries(d.contracts)
+        .map(([name, v]) =>
+          `${name}: <a href="${v.explorer_url}">${v.address}</a>（部署 tx <a href="${v.deploy_tx_url}">${short(v.deploy_tx)}</a>）`)
+        .join("<br>");
+      el.innerHTML =
+        `状态 DEPLOYED · 网络 ${d.network}（chain ${d.chain_id}）· 部署钱包 ${addrLink}<br>${c}<br>` +
+        `真实 commit：#${d.commit.commitment_id} ${d.commit.ticker} ` +
+        `<a href="${d.commit.explorer_url}">${short(d.commit.tx_hash)}</a>`;
+    } else {
+      el.innerHTML =
+        `状态 ${d.status} · 网络 ${d.network}（chain ${d.chain_id}）· 项目部署钱包 ${addrLink} · ` +
+        `余额 ${d.deployer_balance_eth} ETH<br>原因：${d.blocked_reason}<br>` +
+        `解阻办法：${(d.unblock_options || []).join("；")}`;
+    }
+  } catch (e) {
+    el.textContent = "probe/sepolia_deploy.json 未找到（部署探针尚未运行）。";
+  }
+}
+
 async function main() {
+  renderSepolia();
   const [e2e, decisions, pfHistory] = await Promise.all([
     fetch("../probe/phase2_e2e.json").then((r) => r.json()),
     fetch("../agent/out/decisions.json").then((r) => r.json()),

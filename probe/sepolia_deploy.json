@@ -1,0 +1,77 @@
+{
+  "probe": "sealcall-sepolia-deploy",
+  "network": "Base Sepolia (testnet)",
+  "chain_id": 84532,
+  "rpc": "https://sepolia.base.org",
+  "explorer": "https://sepolia.basescan.org",
+  "ran_at_utc": "2026-11-15T16:33:11.140917+00:00",
+  "faucet_attempts": [
+    {
+      "faucet": "Coinbase Developer Platform faucet",
+      "url": "https://portal.cdp.coinbase.com/products/faucet",
+      "outcome": "blocked",
+      "reason": "requires signing in with a Coinbase Developer Platform account; creating accounts is out of scope for this phase and no existing account was used"
+    },
+    {
+      "faucet": "Alchemy Base Sepolia faucet",
+      "url": "https://www.alchemy.com/faucets/base-sepolia",
+      "outcome": "ineligible",
+      "reason": "faucet requires the claiming wallet to hold at least 0.001 ETH on Ethereum mainnet (stated on the faucet page); the fresh project wallet holds none"
+    },
+    {
+      "faucet": "QuickNode Base Sepolia faucet",
+      "url": "https://faucet.quicknode.com/base/sepolia",
+      "outcome": "ineligible",
+      "reason": "faucet requires a small mainnet balance on the claiming wallet plus a browser bot check (stated on the faucet page); the fresh project wallet has no mainnet balance"
+    },
+    {
+      "faucet": "Superchain Faucet (Optimism)",
+      "url": "https://app.optimism.io/faucet",
+      "outcome": "blocked",
+      "reason": "requires Optimism Dev Console sign-in and reCAPTCHA"
+    },
+    {
+      "faucet": "Chainstack faucet",
+      "url": "https://faucet.chainstack.com",
+      "outcome": "blocked",
+      "reason": "requires signing in to a Chainstack account"
+    },
+    {
+      "faucet": "Bware Labs faucet",
+      "url": "https://faucet.bwarelabs.com",
+      "outcome": "unreachable",
+      "reason": "site connection failed from this environment (curl HTTP 000, retried twice)"
+    },
+    {
+      "faucet": "Nodies faucet",
+      "url": "https://faucet.nodies.app",
+      "outcome": "unreachable",
+      "reason": "site connection failed from this environment (curl HTTP 000)"
+    },
+    {
+      "faucet": "Circle faucet",
+      "url": "https://faucet.circle.com",
+      "outcome": "not_applicable",
+      "reason": "dispenses test USDC/EURC only, not the ETH needed for deployment gas; also reCAPTCHA-gated"
+    },
+    {
+      "faucet": "Zalalena Base faucet",
+      "url": "https://faucet.zalalena.com/base",
+      "outcome": "blocked",
+      "reason": "hCaptcha verification required before delivery"
+    }
+  ],
+  "deployer_address": "0x41C19F577ED691B05B3566e552C783B05fbAe000",
+  "deployer_balance_wei": 0,
+  "deployer_balance_eth": "0",
+  "latest_block": 59192620,
+  "status": "BLOCKED",
+  "blocked_reason": "deployer balance is 0 and every public faucet route is gated (account sign-in, captcha, or a mainnet-balance eligibility check the fresh project wallet cannot meet) or unreachable from this environment; see faucet_attempts",
+  "unblock_options": [
+    "Sign in to the Coinbase Developer Platform faucet and drip Base Sepolia ETH to the project address (works for fresh wallets).",
+    "Transfer >= 0.01 Base Sepolia ETH to the project address from any already-funded Base Sepolia wallet.",
+    "Sign in to the Superchain faucet (GitHub) and drip to the project address."
+  ],
+  "contracts": null,
+  "commit": null
+}
