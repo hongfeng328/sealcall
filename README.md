@@ -2,7 +2,8 @@
 
 决策全程上链封存、可验证战绩的代币化股票研究 agent。
 参赛：Base Builder Quest — Stocks Maxxing Season，Agentic Stock Finance 赛道。
-总方案见上级目录 `../PLAN.md`；本仓是其一期骨架（数据层 + 合约骨架）。
+总方案见上级目录 `../PLAN.md`；本仓含一期骨架（数据层 + 合约骨架）与
+二期成果（agent 引擎 + 本地链端到端自测 + Web 看板骨架）。
 
 ## 它做什么
 
@@ -22,23 +23,35 @@ sealcall/
 │   ├── CommitRegistry.sol # 决策封存 commit / 揭示 reveal
 │   ├── FollowRegistry.sol # follow / unfollow + 计数
 │   └── BUILD_STATUS.md    # 编译器版本、命令、产物、未部署声明
-└── probe/
-    ├── api_smoke.py       # 真实调用 API 的冒烟探针
-    └── api_smoke.json     # 探针实测输出（真实数据，非手写）
+├── agent/                 # Agent 引擎（功能 2，二期）
+│   ├── briefs.py          # 动态宇宙（带 NAV 的代币）+ 结构化研究简报
+│   ├── analyst.py         # Analyst 接口 + 规则版占位实现（rules-v0）
+│   ├── llm.py             # LLM 接口与未配置桩（未接真实模型 key）
+│   ├── decisions.py       # 决策对象 + keccak 封存哈希（与合约兼容）
+│   ├── portfolio.py       # 纸面组合按 NAV 计值（功能 4 的本地形态）
+│   ├── engine.py / run.py # 周期编排与 CLI；产出 JSON 在 agent/out/
+│   └── requirements.txt
+├── web/                   # Web 看板骨架（功能 5，二期）：index.html/app.js/style.css
+├── probe/
+│   ├── api_smoke.py       # 真实调用 API 的冒烟探针
+│   ├── api_smoke.json     # 探针实测输出（真实数据，非手写）
+│   ├── phase2_e2e.py      # 二期端到端自测（本地 eth-tester 链）
+│   └── phase2_e2e.json    # 自测实测日志（verdict=PASS，见下）
+└── .venv/                 # 项目 venv（web3/eth-tester 等，不入库）
 ```
 
-后续阶段（不在本期骨架内）：agent 引擎（功能 2）、测试网演示组合（功能 4）、
-Web 看板（功能 5）、公开构建与提交包（功能 6/7）。
+后续阶段：测试网部署与演示组合上链（功能 3/4 的部署部分）、公开构建与
+提交包（功能 6/7）。**合约仍未部署到任何外部网络**（二期自测只用本地模拟链）。
 
 ## 与 PLAN.md §2 v1 功能清单的对应
 
 | PLAN 功能 | 本仓对应 | 状态 |
 |---|---|---|
 | 1. 数据层：API 接入 + NAV 时效检查 | `data/client.py` | ✅ 骨架完成，smoke 实测通过 |
-| 2. Agent 引擎（简报/决策对象/封存揭示流程） | — | 未开始（下一片） |
-| 3. 合约 CommitRegistry + FollowRegistry | `contracts/*.sol` | ✅ 骨架完成，solc 0.8.28 编译通过，**未部署** |
-| 4. 演示组合（测试网纸面组合） | — | 未开始 |
-| 5. Web 看板 | — | 未开始 |
+| 2. Agent 引擎（简报/决策对象/封存揭示流程） | `agent/` | ✅ 二期完成：动态宇宙、结构化简报、规则版决策、keccak 封存哈希与合约对齐；封存/揭示已在本地链实测 |
+| 3. 合约 CommitRegistry + FollowRegistry | `contracts/*.sol` | ✅ 骨架完成，solc 0.8.28 编译通过，**未部署到任何外部网络**（仅本地模拟链部署过） |
+| 4. 演示组合（测试网纸面组合） | `agent/portfolio.py` | ◐ 本地形态完成：纸面组合按 NAV 计值 + 净值历史快照；测试网部署未做（属部署步骤） |
+| 5. Web 看板 | `web/` | ✅ 二期骨架完成：覆盖清单/封存决策时间线/纸面净值三区块，渲染真实运行 JSON |
 | 6. 公开构建（仓库公开/X 帖） | — | 未开始（发帖须 Jason 逐批点头） |
 | 7. 提交包 | — | 未开始 |
 
@@ -80,6 +93,49 @@ python3 probe/api_smoke.py --max-age-seconds 3600   # 自定义 NAV 时效阈值
 ```
 
 依赖：Python 3.12 + `requests`（系统已装）。
+
+## 二期：引擎、自测与看板
+
+环境（项目 venv，依赖见 `agent/requirements.txt`）：
+
+```bash
+cd sealcall
+python3 -m venv .venv && .venv/bin/pip install -r agent/requirements.txt
+```
+
+跑一轮引擎周期（真实调用 API，产出 `agent/out/` 下的 briefs/decisions/
+portfolio 等 JSON）：
+
+```bash
+.venv/bin/python -m agent.run
+```
+
+链下端到端自测（本地 eth-tester 模拟链，部署两合约并跑通
+封存→到期揭示校验→follow/unfollow 计数；实测日志写 `probe/phase2_e2e.json`）：
+
+```bash
+.venv/bin/python probe/phase2_e2e.py --commit-count 3
+```
+
+2026-11-16 实测：verdict=PASS。宇宙 12 只（实时 API）；3 笔决策封存上链，
+过早揭示被合约 RevealTooEarly 正确拒绝，时间旅行到揭示时间后 3 笔全部
+揭示成功且链上 decisionHash 与 Python 计算的 keccak256(payload) 逐一一致；
+follow 计数 1→2→unfollow→1。决策哈希方案：keccak256( canonical JSON
+payload ‖ 32 字节 salt )，与 `CommitRegistry.reveal` 的
+`keccak256(abi.encodePacked(decision, salt))` 字节级兼容（见
+`agent/decisions.py` 文件头）。
+
+看板（纯静态，从仓库根目录起服务器）：
+
+```bash
+python3 -m http.server 8000   # 在 sealcall/ 目录下
+# 浏览器打开 http://localhost:8000/web/
+```
+
+分析师说明：当前是规则版占位（`agent/analyst.py` 的 rules-v0：供给数据
+质量门 → 7 天硬过期 → 动量 -5% 地板 → 等权 BUY），LLM 只留接口
+（`agent/llm.py`），未接任何真实模型 key。NAV 时效：引擎阈值暂用 96h
+（容纳周末冻结），简报中逐只报告真实年龄；交易日历对齐的阈值策略未做。
 
 ## 合约
 

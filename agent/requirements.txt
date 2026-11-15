@@ -1,0 +1,6 @@
+# SealCall phase-2 Python deps (install into the project venv, see ../README.md)
+requests>=2.31        # data layer (phase 1)
+eth-utils>=4          # keccak256 for decision sealing hashes
+web3>=7               # local EVM interaction (probe/phase2_e2e.py)
+eth-tester>=0.11      # in-process local EVM (py-evm) for the e2e probe
+py-evm>=0.10

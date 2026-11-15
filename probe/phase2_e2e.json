@@ -1,0 +1,560 @@
+{
+  "probe": "sealcall-phase2-e2e",
+  "started_at_utc": "2026-11-15T16:28:15.931942+00:00",
+  "network": "local eth-tester (py-evm) in-process chain — NOT an external network",
+  "steps": [
+    {
+      "step": "engine_cycle",
+      "universe_size": 12,
+      "universe": [
+        "CRCLc",
+        "TSLAc",
+        "GOOGLc",
+        "SNDKc",
+        "MSTRc",
+        "INTCc",
+        "NVDAc",
+        "SPCXc",
+        "METAc",
+        "MSFTc",
+        "AAPLc",
+        "AMZNc"
+      ],
+      "views": {
+        "BUY": 12,
+        "HOLD": 0,
+        "AVOID": 0
+      },
+      "analyst": "rules-v0"
+    },
+    {
+      "step": "chain_setup",
+      "chain_id": 131277322940537,
+      "agent_account": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf",
+      "block_number": 0
+    },
+    {
+      "step": "deploy_CommitRegistry",
+      "address": "0xF2E246BB76DF876Cef8b38ae84130F4F55De395b",
+      "tx_hash": "c8169adf129a7e6234c77d78408cc1ad6ad726f5ae2223039dfbbbcef0941da2",
+      "block": 1,
+      "status": 1
+    },
+    {
+      "step": "deploy_FollowRegistry",
+      "address": "0x2946259E0334f33A064106302415aD3391BeD384",
+      "tx_hash": "9d8894f3de92ab25882e24be403ae99de421baf5ad850c7df77a170434cb374f",
+      "block": 2,
+      "status": 1
+    },
+    {
+      "step": "commit",
+      "ticker": "CRCLc",
+      "commitment_id": 0,
+      "commitment_hash": "0x4f4f1798b4722476dbf8af46a34d955b3ebdd918e20553fb268834c9af734d42",
+      "tx_hash": "25e0dd0cb8f7eaaaecc4b8a7f27f5d33008624f73a1a6a11b0eea7f379d2973f",
+      "status": 1
+    },
+    {
+      "step": "commit",
+      "ticker": "TSLAc",
+      "commitment_id": 1,
+      "commitment_hash": "0x01890a2abb719c56caae5bcf99bab24c7b8718956b9dc6753e868d51ab7cf09b",
+      "tx_hash": "b415e0aa19f177c9c980895008178f7fccb95f3cb3c66c48c38c6aed1eeac115",
+      "status": 1
+    },
+    {
+      "step": "commit",
+      "ticker": "GOOGLc",
+      "commitment_id": 2,
+      "commitment_hash": "0x83856f67e50439d2a92b3cfa8c62a7cea16429e1c207b05018029c222f4ec378",
+      "tx_hash": "96c3ac35882b7adfa30482dba3c5c02e2e3026210300c259b38d8ff682645545",
+      "status": 1
+    },
+    {
+      "step": "reveal_too_early",
+      "outcome": "reverted as expected",
+      "error": "TransactionFailed: execution reverted: b'\\xadM\\x96\\xc2\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00j\\xf9\\xde\\x17'"
+    },
+    {
+      "step": "time_travel",
+      "to_timestamp": 1794760220,
+      "chain_timestamp": 1794760220
+    },
+    {
+      "step": "reveal",
+      "ticker": "CRCLc",
+      "commitment_id": 0,
+      "tx_hash": "597a4712f2e589290067e453797d829507b33a01052eed1202705167c81f394d",
+      "status": 1,
+      "onchain_revealed": true,
+      "hash_match": true
+    },
+    {
+      "step": "reveal",
+      "ticker": "TSLAc",
+      "commitment_id": 1,
+      "tx_hash": "c76185c38537e7fa7302be2b70c902d84fc1a3ec4763279a44f1bcc6dd04d394",
+      "status": 1,
+      "onchain_revealed": true,
+      "hash_match": true
+    },
+    {
+      "step": "reveal",
+      "ticker": "GOOGLc",
+      "commitment_id": 2,
+      "tx_hash": "b73a2d6475b54765e01985d3e3680bff521d12d63b2e5008dd8d05c5b7eaca23",
+      "status": 1,
+      "onchain_revealed": true,
+      "hash_match": true
+    },
+    {
+      "step": "follow",
+      "follower": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+      "follower_count_after": 1,
+      "is_following_after": true,
+      "status": 1
+    },
+    {
+      "step": "follow",
+      "follower": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+      "follower_count_after": 2,
+      "is_following_after": true,
+      "status": 1
+    },
+    {
+      "step": "unfollow",
+      "follower": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+      "follower_count_after": 1,
+      "is_following_after": false,
+      "status": 1
+    }
+  ],
+  "errors": [],
+  "briefs": [
+    {
+      "ticker": "CRCLc",
+      "name": "Circle Internet Group Inc.",
+      "contract_address": "0xB20000000000000000000019f6E7C675b73C2e4D",
+      "isin": "US1725731079",
+      "nav_price": 61.215,
+      "nav_updated_at": "2026-11-14T00:34:26Z",
+      "nav_age_seconds": 143629.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 2286.60981177,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Circle Internet Group Inc. (CRCLc): NAV reference 61.215 (Chainlink reference value, not a live quote), last updated 2026-11-14T00:34:26Z (39.9h ago, stale=False vs 96h engine bound). Token supply 2286.60981177; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "TSLAc",
+      "name": "Tesla Inc.",
+      "contract_address": "0xb2000000000000000000001e800a7f5189430cD0",
+      "isin": "US88160R1014",
+      "nav_price": 387.793,
+      "nav_updated_at": "2026-11-13T21:32:29Z",
+      "nav_age_seconds": 154546.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 6432.88183743,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Tesla Inc. (TSLAc): NAV reference 387.793 (Chainlink reference value, not a live quote), last updated 2026-11-13T21:32:29Z (42.9h ago, stale=False vs 96h engine bound). Token supply 6432.88183743; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "GOOGLc",
+      "name": "Alphabet Inc.",
+      "contract_address": "0xb2000000000000000000002D0BA3164cc74f58B7",
+      "isin": "US02079K3059",
+      "nav_price": 294.89116703,
+      "nav_updated_at": "2026-11-13T15:37:14Z",
+      "nav_age_seconds": 175861.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 35372.00982128,
+      "multiplier": 1.0003771186767842,
+      "corporate_actions": [
+        {
+          "type": "multiplier_adjustment",
+          "multiplier": 1.0003771186767842,
+          "detail": "share-to-token ratio != 1: a corporate-action adjustment (e.g. reinvested distributions or a split) has been applied by the issuer",
+          "source": "token record multiplier field"
+        }
+      ],
+      "momentum_pct": null,
+      "brief_text": "Alphabet Inc. (GOOGLc): NAV reference 294.89116703 (Chainlink reference value, not a live quote), last updated 2026-11-13T15:37:14Z (48.9h ago, stale=False vs 96h engine bound). Token supply 35372.00982128; share-to-token multiplier 1.0003771186767842. Corporate-action signals: multiplier_adjustment. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "SNDKc",
+      "name": "Sandisk Corporation",
+      "contract_address": "0xb200000000000000000000397293Cb8cda9a10c5",
+      "isin": "US80004C2008",
+      "nav_price": 866.831,
+      "nav_updated_at": "2026-11-13T22:29:24Z",
+      "nav_age_seconds": 151131.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 2795.03853669,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Sandisk Corporation (SNDKc): NAV reference 866.831 (Chainlink reference value, not a live quote), last updated 2026-11-13T22:29:24Z (42.0h ago, stale=False vs 96h engine bound). Token supply 2795.03853669; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "MSTRc",
+      "name": "Strategy Inc.",
+      "contract_address": "0xb2000000000000000000004884b426556b92883d",
+      "isin": "US5949724083",
+      "nav_price": 109.5,
+      "nav_updated_at": "2026-11-14T00:33:43Z",
+      "nav_age_seconds": 143672.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 20161.97804302,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Strategy Inc. (MSTRc): NAV reference 109.5 (Chainlink reference value, not a live quote), last updated 2026-11-14T00:33:43Z (39.9h ago, stale=False vs 96h engine bound). Token supply 20161.97804302; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "INTCc",
+      "name": "Intel Corporation",
+      "contract_address": "0xB2000000000000000000004AFF16039bA04bdFBc",
+      "isin": "US4581401001",
+      "nav_price": 58.765,
+      "nav_updated_at": "2026-11-13T22:40:02Z",
+      "nav_age_seconds": 150493.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 2266.05019214,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Intel Corporation (INTCc): NAV reference 58.765 (Chainlink reference value, not a live quote), last updated 2026-11-13T22:40:02Z (41.8h ago, stale=False vs 96h engine bound). Token supply 2266.05019214; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "NVDAc",
+      "name": "NVIDIA Corporation",
+      "contract_address": "0xb20000000000000000000078ee7ce2fE4908108C",
+      "isin": "US67066G1040",
+      "nav_price": 160.76543559,
+      "nav_updated_at": "2026-11-13T23:36:23Z",
+      "nav_age_seconds": 147112.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 49255.60410884,
+      "multiplier": 1.0005379395763694,
+      "corporate_actions": [
+        {
+          "type": "multiplier_adjustment",
+          "multiplier": 1.0005379395763694,
+          "detail": "share-to-token ratio != 1: a corporate-action adjustment (e.g. reinvested distributions or a split) has been applied by the issuer",
+          "source": "token record multiplier field"
+        }
+      ],
+      "momentum_pct": null,
+      "brief_text": "NVIDIA Corporation (NVDAc): NAV reference 160.76543559 (Chainlink reference value, not a live quote), last updated 2026-11-13T23:36:23Z (40.9h ago, stale=False vs 96h engine bound). Token supply 49255.60410884; share-to-token multiplier 1.0005379395763694. Corporate-action signals: multiplier_adjustment. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "SPCXc",
+      "name": "Space Exploration Technologies Corp.",
+      "contract_address": "0xb2000000000000000000007b9fcbd005511aCBd5",
+      "isin": "US84615Q1031",
+      "nav_price": 136.54,
+      "nav_updated_at": "2026-11-13T23:40:59Z",
+      "nav_age_seconds": 146836.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 26167.69281946,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Space Exploration Technologies Corp. (SPCXc): NAV reference 136.54 (Chainlink reference value, not a live quote), last updated 2026-11-13T23:40:59Z (40.8h ago, stale=False vs 96h engine bound). Token supply 26167.69281946; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "METAc",
+      "name": "Meta Platforms Inc.",
+      "contract_address": "0xb2000000000000000000008bC8786B856E61707C",
+      "isin": "US30303M1027",
+      "nav_price": 638.54030616,
+      "nav_updated_at": "2026-11-13T21:05:04Z",
+      "nav_age_seconds": 156191.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 8482.68154474,
+      "multiplier": 1.0003137922895982,
+      "corporate_actions": [
+        {
+          "type": "multiplier_adjustment",
+          "multiplier": 1.0003137922895982,
+          "detail": "share-to-token ratio != 1: a corporate-action adjustment (e.g. reinvested distributions or a split) has been applied by the issuer",
+          "source": "token record multiplier field"
+        }
+      ],
+      "momentum_pct": null,
+      "brief_text": "Meta Platforms Inc. (METAc): NAV reference 638.54030616 (Chainlink reference value, not a live quote), last updated 2026-11-13T21:05:04Z (43.4h ago, stale=False vs 96h engine bound). Token supply 8482.68154474; share-to-token multiplier 1.0003137922895982. Corporate-action signals: multiplier_adjustment. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "MSFTc",
+      "name": "Microsoft Corporation",
+      "contract_address": "0xB200000000000000000000Ab99cFa739E253872B",
+      "isin": "US5949181045",
+      "nav_price": 522.405,
+      "nav_updated_at": "2026-11-13T21:03:29Z",
+      "nav_age_seconds": 156286.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 2696.70741505,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Microsoft Corporation (MSFTc): NAV reference 522.405 (Chainlink reference value, not a live quote), last updated 2026-11-13T21:03:29Z (43.4h ago, stale=False vs 96h engine bound). Token supply 2696.70741505; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "AAPLc",
+      "name": "Apple Inc.",
+      "contract_address": "0xb200000000000000000000C2e324d24d7eEcd1fb",
+      "isin": "US0378331005",
+      "nav_price": 355.585,
+      "nav_updated_at": "2026-11-13T21:05:53Z",
+      "nav_age_seconds": 156142.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 6000.17259753,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Apple Inc. (AAPLc): NAV reference 355.585 (Chainlink reference value, not a live quote), last updated 2026-11-13T21:05:53Z (43.4h ago, stale=False vs 96h engine bound). Token supply 6000.17259753; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    },
+    {
+      "ticker": "AMZNc",
+      "name": "Amazon.com Inc.",
+      "contract_address": "0xb200000000000000000000d9192b6B456483C2E8",
+      "isin": "US0231351067",
+      "nav_price": 265.44725,
+      "nav_updated_at": "2026-11-13T21:04:28Z",
+      "nav_age_seconds": 156227.932183,
+      "nav_stale": false,
+      "nav_max_age_seconds": 345600,
+      "total_supply": 7833.50295316,
+      "multiplier": 1,
+      "corporate_actions": [],
+      "momentum_pct": null,
+      "brief_text": "Amazon.com Inc. (AMZNc): NAV reference 265.44725 (Chainlink reference value, not a live quote), last updated 2026-11-13T21:04:28Z (43.4h ago, stale=False vs 96h engine bound). Token supply 7833.50295316; share-to-token multiplier 1. No corporate-action signals observable in API data. No previous NAV snapshot; momentum unknown.",
+      "generated_at": "2026-11-15T16:28:15.932183+00:00"
+    }
+  ],
+  "portfolio": {
+    "kind": "paper_portfolio_nav_valued",
+    "start_cash_usd": 100000.0,
+    "cash_usd": 0.4,
+    "invested_usd": 99999.6,
+    "total_value_usd": 100000.0,
+    "holdings": [
+      {
+        "ticker": "AAPLc",
+        "weight_pct": 8.3333,
+        "nav_price": 355.585,
+        "nav_updated_at": "2026-11-13T21:05:53Z",
+        "units": 23.435466,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "AMZNc",
+        "weight_pct": 8.3333,
+        "nav_price": 265.44725,
+        "nav_updated_at": "2026-11-13T21:04:28Z",
+        "units": 31.393431,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "CRCLc",
+        "weight_pct": 8.3333,
+        "nav_price": 61.215,
+        "nav_updated_at": "2026-11-14T00:34:26Z",
+        "units": 136.131667,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "GOOGLc",
+        "weight_pct": 8.3333,
+        "nav_price": 294.89116703,
+        "nav_updated_at": "2026-11-13T15:37:14Z",
+        "units": 28.2589,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "INTCc",
+        "weight_pct": 8.3333,
+        "nav_price": 58.765,
+        "nav_updated_at": "2026-11-13T22:40:02Z",
+        "units": 141.807198,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "METAc",
+        "weight_pct": 8.3333,
+        "nav_price": 638.54030616,
+        "nav_updated_at": "2026-11-13T21:05:04Z",
+        "units": 13.050547,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "MSFTc",
+        "weight_pct": 8.3333,
+        "nav_price": 522.405,
+        "nav_updated_at": "2026-11-13T21:03:29Z",
+        "units": 15.9518,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "MSTRc",
+        "weight_pct": 8.3333,
+        "nav_price": 109.5,
+        "nav_updated_at": "2026-11-14T00:33:43Z",
+        "units": 76.103196,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "NVDAc",
+        "weight_pct": 8.3333,
+        "nav_price": 160.76543559,
+        "nav_updated_at": "2026-11-13T23:36:23Z",
+        "units": 51.835147,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "SNDKc",
+        "weight_pct": 8.3333,
+        "nav_price": 866.831,
+        "nav_updated_at": "2026-11-13T22:29:24Z",
+        "units": 9.613523,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "SPCXc",
+        "weight_pct": 8.3333,
+        "nav_price": 136.54,
+        "nav_updated_at": "2026-11-13T23:40:59Z",
+        "units": 61.031932,
+        "value_usd": 8333.3
+      },
+      {
+        "ticker": "TSLAc",
+        "weight_pct": 8.3333,
+        "nav_price": 387.793,
+        "nav_updated_at": "2026-11-13T21:32:29Z",
+        "units": 21.489042,
+        "value_usd": 8333.3
+      }
+    ],
+    "valued_at": "2026-11-15T16:28:15.932183+00:00",
+    "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
+  },
+  "contracts": {
+    "CommitRegistry": "0xF2E246BB76DF876Cef8b38ae84130F4F55De395b",
+    "FollowRegistry": "0x2946259E0334f33A064106302415aD3391BeD384"
+  },
+  "decisions_onchain": [
+    {
+      "ticker": "CRCLc",
+      "commitment_id": 0,
+      "commit_tx": "25e0dd0cb8f7eaaaecc4b8a7f27f5d33008624f73a1a6a11b0eea7f379d2973f",
+      "reveal_tx": "597a4712f2e589290067e453797d829507b33a01052eed1202705167c81f394d",
+      "reveal_block": 8,
+      "reveal_status": 1,
+      "commitment_hash": "0x4f4f1798b4722476dbf8af46a34d955b3ebdd918e20553fb268834c9af734d42",
+      "python_decision_hash": "0x600911f5195468129a38dd330ab2a7e2e015bf75b3e6c8bc5368704e8072b445",
+      "onchain_decision_hash": "0x600911f5195468129a38dd330ab2a7e2e015bf75b3e6c8bc5368704e8072b445",
+      "onchain_revealed": true,
+      "hash_match": true,
+      "view": "BUY",
+      "target_weight_pct": 8.3333,
+      "reveal_at": 1794760215,
+      "payload_canonical_json": "{\"agent\":\"sealcall-rules-v0\",\"brief_sha256\":\"17b6931c2fe4464573c0eed868927297f3f0746368a188b0e58e0ea449ca5461\",\"created_at\":1794760095,\"rationale\":\"CRCLc: NAV reference 61.215 usable (age 39.9h within bound), supply 2286.60981177 reported, no prior snapshot (momentum neutral); equal-weight BUY candidate for this cycle.\",\"reveal_at\":1794760215,\"target_weight_pct\":8.3333,\"ticker\":\"CRCLc\",\"v\":1,\"view\":\"BUY\"}",
+      "salt_hex": "0x152e707e5dc680adba3359eeebea19cef853b75fb1bae585cb18bcf8fce907bc"
+    },
+    {
+      "ticker": "TSLAc",
+      "commitment_id": 1,
+      "commit_tx": "b415e0aa19f177c9c980895008178f7fccb95f3cb3c66c48c38c6aed1eeac115",
+      "reveal_tx": "c76185c38537e7fa7302be2b70c902d84fc1a3ec4763279a44f1bcc6dd04d394",
+      "reveal_block": 9,
+      "reveal_status": 1,
+      "commitment_hash": "0x01890a2abb719c56caae5bcf99bab24c7b8718956b9dc6753e868d51ab7cf09b",
+      "python_decision_hash": "0xd7d521b9448ff46c97b5d7e84d0749f085e6aaf09305756f7e9e4a73603decf4",
+      "onchain_decision_hash": "0xd7d521b9448ff46c97b5d7e84d0749f085e6aaf09305756f7e9e4a73603decf4",
+      "onchain_revealed": true,
+      "hash_match": true,
+      "view": "BUY",
+      "target_weight_pct": 8.3333,
+      "reveal_at": 1794760215,
+      "payload_canonical_json": "{\"agent\":\"sealcall-rules-v0\",\"brief_sha256\":\"5ef459cac26ef3f1064e8db593d9beac1db31131ba3cc63178c4aa34034f28c9\",\"created_at\":1794760095,\"rationale\":\"TSLAc: NAV reference 387.793 usable (age 42.9h within bound), supply 6432.88183743 reported, no prior snapshot (momentum neutral); equal-weight BUY candidate for this cycle.\",\"reveal_at\":1794760215,\"target_weight_pct\":8.3333,\"ticker\":\"TSLAc\",\"v\":1,\"view\":\"BUY\"}",
+      "salt_hex": "0xf9dc62c7faacffbf039db2ef06883ff1e77b06eba8d0b9c76bb597037117a071"
+    },
+    {
+      "ticker": "GOOGLc",
+      "commitment_id": 2,
+      "commit_tx": "96c3ac35882b7adfa30482dba3c5c02e2e3026210300c259b38d8ff682645545",
+      "reveal_tx": "b73a2d6475b54765e01985d3e3680bff521d12d63b2e5008dd8d05c5b7eaca23",
+      "reveal_block": 10,
+      "reveal_status": 1,
+      "commitment_hash": "0x83856f67e50439d2a92b3cfa8c62a7cea16429e1c207b05018029c222f4ec378",
+      "python_decision_hash": "0xbf854e19e0e6e385d42c91037ccdf8a50884af79f4ec503e4fcadbce32f0c099",
+      "onchain_decision_hash": "0xbf854e19e0e6e385d42c91037ccdf8a50884af79f4ec503e4fcadbce32f0c099",
+      "onchain_revealed": true,
+      "hash_match": true,
+      "view": "BUY",
+      "target_weight_pct": 8.3333,
+      "reveal_at": 1794760215,
+      "payload_canonical_json": "{\"agent\":\"sealcall-rules-v0\",\"brief_sha256\":\"67b439bdc8a9fd442618070d0978df25c011e5eb371d9619b9bfdded7bfe96b1\",\"created_at\":1794760095,\"rationale\":\"GOOGLc: NAV reference 294.89116703 usable (age 48.9h within bound), supply 35372.00982128 reported, no prior snapshot (momentum neutral); equal-weight BUY candidate for this cycle.\",\"reveal_at\":1794760215,\"target_weight_pct\":8.3333,\"ticker\":\"GOOGLc\",\"v\":1,\"view\":\"BUY\"}",
+      "salt_hex": "0xa7f4d106d8de117888378ab66fcfd6e8f05ac395ec74e4dc763c5417b5cce84c"
+    }
+  ],
+  "follow_flow": [
+    {
+      "action": "follow",
+      "follower": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+      "note": "follower1 follows agent",
+      "tx_hash": "4cdb655519f38f57bb37efb240ab8e167e132cb1ac65bc5e0182fff49e51f5ed",
+      "status": 1,
+      "follower_count_after": 1,
+      "is_following_after": true
+    },
+    {
+      "action": "follow",
+      "follower": "0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69",
+      "note": "follower2 follows agent",
+      "tx_hash": "4d0e7162068ab4f79a0f88ec1afcda7c2d492885d6d8c8ac92a3fdd87318fb7a",
+      "status": 1,
+      "follower_count_after": 2,
+      "is_following_after": true
+    },
+    {
+      "action": "unfollow",
+      "follower": "0x2B5AD5c4795c026514f8317c7a215E218DcCD6cF",
+      "note": "follower1 unfollows agent",
+      "tx_hash": "5dbef381f977cbd47f970a1ba67ccdab3911232743e2f01f7818f06a923254cf",
+      "status": 1,
+      "follower_count_after": 1,
+      "is_following_after": false
+    }
+  ],
+  "final_follower_count": 1,
+  "verdict": "PASS",
+  "finished_at_utc": "2026-11-15T16:28:21.139706+00:00"
+}

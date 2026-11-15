@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>SealCall — 看板（phase 2 骨架）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>SealCall 看板</h1>
+<p class="sub">决策上链封存 · 到期揭示 · 战绩按 NAV 计值。本页数据全部来自真实运行产物：
+<code>probe/phase2_e2e.json</code>（引擎+本地链自测）与 <code>agent/out/</code>（引擎周期输出）。
+本地模拟链数据，非外部网络。</p>
+<p id="meta" class="sub">加载中…</p>
+
+<h2>1. Agent 覆盖清单（带 NAV 的代币化股票）</h2>
+<table id="universe">
+  <thead><tr><th>Ticker</th><th>名称</th><th>NAV</th><th>NAV 更新时间</th>
+  <th>NAV 年龄(h)</th><th>过期?</th><th>供给量</th><th>公司行动信号</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<h2>2. 已封存决策时间线</h2>
+<h3>2a. 已上链封存并揭示（本地模拟链实测）</h3>
+<table id="onchain">
+  <thead><tr><th>#</th><th>Ticker</th><th>观点</th><th>目标权重%</th>
+  <th>Commit Tx</th><th>揭示时间</th><th>Reveal Tx</th><th>链上已揭示</th><th>哈希校验</th></tr></thead>
+  <tbody></tbody>
+</table>
+<p id="follow" class="sub"></p>
+<h3>2b. 本轮引擎全部决策（已生成封存哈希，尚未上链）</h3>
+<table id="pending">
+  <thead><tr><th>Ticker</th><th>观点</th><th>目标权重%</th><th>封存哈希（keccak）</th><th>揭示时间</th></tr></thead>
+  <tbody></tbody>
+</table>
+
+<h2>3. 演示组合（纸面，按 NAV 计值）</h2>
+<p id="pf-meta" class="sub"></p>
+<table id="portfolio">
+  <thead><tr><th>Ticker</th><th>权重%</th><th>NAV</th><th>单位数</th><th>市值 USD</th></tr></thead>
+  <tbody></tbody>
+</table>
+<h3>纸面净值历史（引擎各轮快照）</h3>
+<div id="pf-history"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

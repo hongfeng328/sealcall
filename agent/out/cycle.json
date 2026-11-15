@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-11-15T16:28:50.733310+00:00",
+  "universe_size": 12,
+  "universe": [
+    "CRCLc",
+    "TSLAc",
+    "GOOGLc",
+    "SNDKc",
+    "MSTRc",
+    "INTCc",
+    "NVDAc",
+    "SPCXc",
+    "METAc",
+    "MSFTc",
+    "AAPLc",
+    "AMZNc"
+  ],
+  "views": {
+    "BUY": 12,
+    "HOLD": 0,
+    "AVOID": 0
+  },
+  "analyst": "rules-v0",
+  "reveal_delay_seconds": 86400,
+  "briefs_file": "briefs.json",
+  "decisions_file": "decisions.json",
+  "portfolio_file": "portfolio.json"
+}
