@@ -26,7 +26,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from data.client import TokenizedStocksClient  # noqa: E402
 
 from . import briefs as brief_mod  # noqa: E402
-from .analyst import Analyst, RuleBasedAnalyst  # noqa: E402
+from .analyst import Analyst, SignalAnalyst  # noqa: E402
 from .decisions import make_decision  # noqa: E402
 from .portfolio import build_portfolio, remark_portfolio  # noqa: E402
 
@@ -49,7 +49,7 @@ def run_cycle(out_dir: str = DEFAULT_OUT_DIR,
     """Run one full cycle and persist all outputs. Returns the cycle dict."""
     os.makedirs(out_dir, exist_ok=True)
     client = client or TokenizedStocksClient()
-    analyst = analyst or RuleBasedAnalyst()
+    analyst = analyst or SignalAnalyst()
     now = now or datetime.now(timezone.utc)
     created_at = int(now.timestamp())
 
@@ -57,6 +57,12 @@ def run_cycle(out_dir: str = DEFAULT_OUT_DIR,
     universe = brief_mod.fetch_universe(client)
     brief_list = [brief_mod.build_brief(client, rec, history, now=now)
                   for rec in universe]
+
+    # Cross-sectional analysts (signals-v1) need the whole universe
+    # once per cycle; the hook is optional on the Analyst protocol.
+    prepare = getattr(analyst, "prepare", None)
+    if callable(prepare):
+        prepare(brief_list)
 
     analyses = {b["ticker"]: analyst.analyze(b) for b in brief_list}
     buy_tickers = [t for t, a in analyses.items() if a.view == "BUY"]
@@ -74,6 +80,7 @@ def run_cycle(out_dir: str = DEFAULT_OUT_DIR,
             brief=brief,
             created_at=created_at,
             reveal_delay_seconds=reveal_delay_seconds,
+            agent_id=f"sealcall-{getattr(analyst, 'name', 'unknown')}",
         )
         decision_list.append(d.to_json())
 

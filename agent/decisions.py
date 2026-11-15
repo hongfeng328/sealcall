@@ -118,7 +118,8 @@ class Decision:
 def make_decision(ticker: str, view: str, target_weight_pct: float,
                   rationale: str, brief: dict, created_at: int,
                   reveal_delay_seconds: int,
-                  salt: Optional[bytes] = None) -> Decision:
+                  salt: Optional[bytes] = None,
+                  agent_id: Optional[str] = None) -> Decision:
     """Build a Decision bound to a brief, with reveal time = created + delay."""
     d = Decision(
         ticker=ticker,
@@ -129,5 +130,6 @@ def make_decision(ticker: str, view: str, target_weight_pct: float,
         reveal_at=created_at + reveal_delay_seconds,
         brief_sha256=brief_reference(brief),
         salt=salt if salt is not None else secrets.token_bytes(32),
+        agent_id=agent_id or AGENT_ID,
     )
     return d

@@ -3,9 +3,10 @@
 决策全程上链封存、可验证战绩的代币化股票研究 agent。
 参赛：Base Builder Quest — Stocks Maxxing Season，Agentic Stock Finance 赛道。
 总方案见上级目录 `../PLAN.md`；本仓含一期骨架（数据层 + 合约骨架）、
-二期成果（agent 引擎 + 本地链端到端自测 + Web 看板骨架）与三期成果
+二期成果（agent 引擎 + 本地链端到端自测 + Web 看板骨架）、三期成果
 （项目专用钱包 + NYSE 交易日历版 NAV 时效 + Base Sepolia 部署尝试，
-部署因水龙头门槛 BLOCKED，见下文三期一节）。
+部署因水龙头门槛 BLOCKED，见下文三期一节）与四期成果（分析师
+signals-v1 + 每日一键周期 + 公开构建文案草稿，见下文四期一节）。
 
 ## 它做什么
 
@@ -28,12 +29,14 @@ sealcall/
 │   └── BUILD_STATUS.md    # 编译器版本、命令、产物、未部署声明
 ├── agent/                 # Agent 引擎（功能 2，二期）
 │   ├── briefs.py          # 动态宇宙（带 NAV 的代币）+ 结构化研究简报
-│   ├── analyst.py         # Analyst 接口 + 规则版占位实现（rules-v0）
+│   ├── analyst.py         # Analyst 接口 + rules-v0（存档）/ signals-v1（现行）
 │   ├── llm.py             # LLM 接口与未配置桩（未接真实模型 key）
 │   ├── decisions.py       # 决策对象 + keccak 封存哈希（与合约兼容）
 │   ├── portfolio.py       # 纸面组合按 NAV 计值（功能 4 的本地形态）
 │   ├── engine.py / run.py # 周期编排与 CLI；产出 JSON 在 agent/out/
+│   ├── cycle.py           # 每日一键周期：引擎 + 本地链 commit + 净值历史（四期）
 │   └── requirements.txt
+├── docs/posts/            # 公开构建文案草稿（四期；全部未发布，须 Jason 点头）
 ├── web/                   # Web 看板骨架（功能 5，二期）：index.html/app.js/style.css
 ├── probe/
 │   ├── api_smoke.py       # 真实调用 API 的冒烟探针
@@ -43,7 +46,10 @@ sealcall/
 │   ├── nav_calendar_test.py   # 三期：日历时效判定场景自测
 │   ├── nav_calendar_test.json # 自测实测输出（verdict=PASS，见下）
 │   ├── sepolia_deploy.py  # 三期：Base Sepolia 部署探针（唯一允许的外部网络）
-│   └── sepolia_deploy.json    # 部署实测记录（status=BLOCKED，见下）
+│   ├── sepolia_deploy.json    # 部署实测记录（status=BLOCKED，见下）
+│   ├── analyst_v1_report.py   # 四期：signals-v1 实测报告探针
+│   ├── analyst_v1_report.json # 实测输出（观点分布 + 逐只信号与理由）
+│   ├── cycle_log.json     # 四期：每日周期两轮实测日志（commit 数/净值变化）
 ├── .env.local             # 项目专用部署钱包（gitignore 覆盖，绝不入库）
 └── .venv/                 # 项目 venv（web3/eth-tester 等，不入库）
 ```
@@ -58,7 +64,7 @@ sealcall/
 | PLAN 功能 | 本仓对应 | 状态 |
 |---|---|---|
 | 1. 数据层：API 接入 + NAV 时效检查 | `data/client.py` + `data/market_calendar.py` | ✅ 完成：smoke 实测通过；三期起时效判定换 NYSE 交易日历版（见三期一节） |
-| 2. Agent 引擎（简报/决策对象/封存揭示流程） | `agent/` | ✅ 二期完成：动态宇宙、结构化简报、规则版决策、keccak 封存哈希与合约对齐；封存/揭示已在本地链实测 |
+| 2. Agent 引擎（简报/决策对象/封存揭示流程） | `agent/` | ✅ 二期完成；四期升级：分析师 signals-v1（横截面信号 + 降级明示）+ 每日一键周期 `agent/cycle.py`，见四期一节 |
 | 3. 合约 CommitRegistry + FollowRegistry | `contracts/*.sol` | ✅ 骨架完成，solc 0.8.28 编译通过，**未部署到任何外部网络**（仅本地模拟链部署过）；三期 Sepolia 部署尝试 BLOCKED（水龙头门槛，见三期一节） |
 | 4. 演示组合（测试网纸面组合） | `agent/portfolio.py` | ◐ 本地形态完成：纸面组合按 NAV 计值 + 净值历史快照；测试网部署未做（属部署步骤） |
 | 5. Web 看板 | `web/` | ✅ 二期骨架完成：覆盖清单/封存决策时间线/纸面净值三区块，渲染真实运行 JSON |
@@ -144,8 +150,9 @@ python3 -m http.server 8000   # 在 sealcall/ 目录下
 # 浏览器打开 http://localhost:8000/web/
 ```
 
-分析师说明：当前是规则版占位（`agent/analyst.py` 的 rules-v0：供给数据
-质量门 → 7 天硬过期 → 动量 -5% 地板 → 等权 BUY），LLM 只留接口
+分析师说明：二期是规则版占位（`agent/analyst.py` 的 rules-v0：供给数据
+质量门 → 7 天硬过期 → 动量 -5% 地板 → 等权 BUY）；**四期已升级为
+signals-v1 并设为引擎默认**，见下文四期一节。LLM 只留接口
 （`agent/llm.py`），未接任何真实模型 key。NAV 时效：二期时引擎阈值
 暂用固定 96h（容纳周末冻结）；**三期已替换为交易日历版**，见下节。
 
@@ -179,6 +186,39 @@ Circle 只发测试 USDC 不发 gas，Zalalena 要 hCaptcha，Bware/Nodies
 
 看板（`web/`）顶部第 0 区实时渲染 `probe/sepolia_deploy.json`：
 已部署时显示合约地址与浏览器链接，未部署时如实显示 BLOCKED 与原因。
+
+## 四期：分析师 signals-v1、每日一键周期、文案草稿
+
+**分析师 v1（`agent/analyst.py` 的 `SignalAnalyst`，引擎新默认）**：
+替换 rules-v0 的「全过门即全 BUY」。决策阶梯：供给数据质量门（缺失 →
+AVOID）→ NAV 日历时效门（stale → HOLD）→ 微量流通门（流通市值 <
+$25 万且 < 全宇宙中位数 10% → AVOID）→ 方向分（只用活着的信号：
+跨轮 NAV 动量 0.7 + 供给变化 0.3，±0.25 出 BUY/AVOID）→ 无方向证据
+时按流通深度定姿态（≥$100 万 BUY 低置信、否则 HOLD）。信号缺失或
+无信息（如动量全宇宙同为 0.00%）一律**降级并在理由中明示**，不编造。
+简报新增 `supply_change_pct`，`nav_history.json` 扩展存供给量。
+
+2026-11-16 实测（`probe/analyst_v1_report.py` → `analyst_v1_report.json`）：
+观点分布 **BUY 9 / HOLD 1 / AVOID 2**（对比 rules-v0 的 12/0/0）——
+GOOGLc 因 NAV 开市年龄 5.4h 超 4h 界被时效门 HOLD；CRCLc、INTCc 因
+流通市值仅约 $14 万（中位数 $231 万的 6%）被微量流通门 AVOID；其余
+9 只在动量/供给变化双双降级（冻结）时按深度姿态 BUY 并明示低置信。
+
+**每日一键周期（`agent/cycle.py`）**：一键完成拉数据 → 简报与决策 →
+本地模拟链 commit 全部决策 → 追加组合净值历史。
+
+```bash
+.venv/bin/python -m agent.cycle --rounds 2   # 日志写 probe/cycle_log.json
+```
+
+2026-11-16 实测：两轮各 12 笔决策、12 笔 commit、0 失败（同一本地
+注册表累计 24 笔），观点分布两轮均为 9/1/2；组合净值变化 $0.00
+（NAV 冻结于周五收盘，纸面组合按 NAV 计值未动——真实输出，非缺失）。
+
+**文案草稿（`docs/posts/`，全部未发布）**：01 首条公开构建帖、
+02 项目介绍串帖、03 提交帖模板（演示视频/表单/仓库链接留占位符）。
+正文均 ≤280 字符、事实陈述口径、无收益承诺措辞；发布须 Jason 逐批
+点头（PLAN.md §5）。
 
 ## 合约
 

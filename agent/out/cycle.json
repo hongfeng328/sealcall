@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T16:31:41.037666+00:00",
+  "generated_at": "2026-11-15T16:39:06.232360+00:00",
   "universe_size": 12,
   "universe": [
     "CRCLc",
@@ -16,12 +16,12 @@
     "AMZNc"
   ],
   "views": {
-    "BUY": 12,
-    "HOLD": 0,
-    "AVOID": 0
+    "BUY": 9,
+    "HOLD": 1,
+    "AVOID": 2
   },
-  "analyst": "rules-v0",
-  "reveal_delay_seconds": 86400,
+  "analyst": "signals-v1",
+  "reveal_delay_seconds": 3600,
   "briefs_file": "briefs.json",
   "decisions_file": "decisions.json",
   "portfolio_file": "portfolio.json"

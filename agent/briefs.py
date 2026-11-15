@@ -9,7 +9,8 @@ Each brief is a structured JSON dict:
   nav_age_seconds, nav_stale (vs the NYSE-calendar policy in
   data/market_calendar.py), total_supply,
   multiplier, corporate_actions, momentum_pct (vs the previous engine
-  snapshot, when one exists), brief_text, generated_at.
+  snapshot, when one exists), supply_change_pct (same, phase 4; None
+  until history carries total_supply), brief_text, generated_at.
 
 Corporate actions: the API exposes them only by UUID via
 /corporate-actions/{id} and token records do not carry IDs, so the
@@ -82,6 +83,27 @@ def _find_momentum(history: dict, ticker: str, nav_price: Optional[str]) -> Opti
     return round((cur_price - prev_price) / prev_price * 100.0, 4)
 
 
+def _find_supply_change(history: dict, ticker: str,
+                        supply: Any) -> Optional[float]:
+    """% change in total supply vs the previous snapshot, or None.
+
+    History entries written before phase 4 carry no ``total_supply``,
+    so this returns None until one full cycle has run with the extended
+    history format — the signal is reported as unavailable, never faked.
+    """
+    prev = history.get(ticker)
+    if not prev or supply is None or prev.get("total_supply") is None:
+        return None
+    try:
+        prev_supply = float(prev["total_supply"])
+        cur_supply = float(supply)
+    except (TypeError, ValueError):
+        return None
+    if prev_supply == 0:
+        return None
+    return round((cur_supply - prev_supply) / prev_supply * 100.0, 4)
+
+
 def build_brief(client: TokenizedStocksClient, record: TokenRecord,
                 history: dict, now: Optional[datetime] = None,
                 fetch_metadata: bool = True) -> dict:
@@ -109,6 +131,7 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
             supply = None
     actions = _corporate_actions(record, metadata)
     momentum = _find_momentum(history, record.symbol, record.nav_price)
+    supply_change = _find_supply_change(history, record.symbol, supply)
     age_h = (quote.age_seconds or 0) / 3600.0
     market_age_h = ((fresh.market_age_seconds if fresh else 0) or 0) / 3600.0
     lines = [
@@ -128,6 +151,10 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
         lines.append(f"NAV momentum vs previous engine snapshot: {momentum:+.2f}%.")
     else:
         lines.append("No previous NAV snapshot; momentum unknown.")
+    if supply_change is not None:
+        lines.append(f"Total supply change vs previous snapshot: {supply_change:+.2f}%.")
+    else:
+        lines.append("No previous supply snapshot; supply change unknown.")
     brief = {
         "ticker": record.symbol,
         "name": record.name,
@@ -144,6 +171,7 @@ def build_brief(client: TokenizedStocksClient, record: TokenRecord,
         "multiplier": record.multiplier,
         "corporate_actions": actions,
         "momentum_pct": momentum,
+        "supply_change_pct": supply_change,
         "brief_text": " ".join(lines),
         "generated_at": now.isoformat(),
     }
@@ -167,6 +195,7 @@ def save_history(out_dir: str, briefs: list[dict]) -> None:
         b["ticker"]: {
             "nav_price": b["nav_price"],
             "nav_updated_at": b["nav_updated_at"],
+            "total_supply": b.get("total_supply"),
             "snapshot_at": b["generated_at"],
         }
         for b in briefs if b.get("nav_price") is not None

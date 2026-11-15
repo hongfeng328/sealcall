@@ -1,0 +1,267 @@
+{
+  "probe": "sealcall-analyst-v1",
+  "generated_at_utc": "2026-11-15T16:38:57.483125+00:00",
+  "analyst": "signals-v1",
+  "universe_size": 12,
+  "universe": [
+    "CRCLc",
+    "TSLAc",
+    "GOOGLc",
+    "SNDKc",
+    "MSTRc",
+    "INTCc",
+    "NVDAc",
+    "SPCXc",
+    "METAc",
+    "MSFTc",
+    "AAPLc",
+    "AMZNc"
+  ],
+  "view_distribution": {
+    "BUY": 9,
+    "HOLD": 1,
+    "AVOID": 2
+  },
+  "degraded_signals": [
+    {
+      "signal": "cross_cycle_nav_momentum",
+      "status": "degenerate",
+      "reason": "momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle"
+    },
+    {
+      "signal": "total_supply_change",
+      "status": "degenerate",
+      "reason": "total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle"
+    }
+  ],
+  "tokens": [
+    {
+      "ticker": "CRCLc",
+      "view": "AVOID",
+      "target_weight_pct": 0.0,
+      "rationale": "CRCLc: tokenized float is only $139,975 (supply 2,287 x NAV 61.215), 6% of the universe median float $2,315,281 and ranked 11 of 12; the on-chain reference rests on a negligible float — avoid until the float deepens.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 139974.82,
+        "float_rank": "11 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "gate_float"
+      }
+    },
+    {
+      "ticker": "TSLAc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "TSLAc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $2,494,627 (ranked 5 of 12, median $2,315,281), NAV reference 387.793 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 2494626.55,
+        "float_rank": "5 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "GOOGLc",
+      "view": "HOLD",
+      "target_weight_pct": 0.0,
+      "rationale": "GOOGLc: NAV reference 294.89116703 has sat through 5.4h of open-market time, beyond the 4h nyse-calendar-v1 bound; no view on a stale reference until the feed refreshes.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 10430893.26,
+        "float_rank": "1 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": true,
+        "nav_market_age_h": 5.38,
+        "score": null,
+        "branch": "gate_stale"
+      }
+    },
+    {
+      "ticker": "SNDKc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "SNDKc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $2,422,826 (ranked 6 of 12, median $2,315,281), NAV reference 866.831 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 2422826.05,
+        "float_rank": "6 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "MSTRc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "MSTRc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $2,207,737 (ranked 7 of 12, median $2,315,281), NAV reference 109.5 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 2207736.6,
+        "float_rank": "7 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "INTCc",
+      "view": "AVOID",
+      "target_weight_pct": 0.0,
+      "rationale": "INTCc: tokenized float is only $133,164 (supply 2,266 x NAV 58.765), 6% of the universe median float $2,315,281 and ranked 12 of 12; the on-chain reference rests on a negligible float — avoid until the float deepens.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 133164.44,
+        "float_rank": "12 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "gate_float"
+      }
+    },
+    {
+      "ticker": "NVDAc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "NVDAc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $7,918,599 (ranked 2 of 12, median $2,315,281), NAV reference 160.76543559 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 7918598.65,
+        "float_rank": "2 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "SPCXc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "SPCXc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $3,572,937 (ranked 4 of 12, median $2,315,281), NAV reference 136.54 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 3572936.78,
+        "float_rank": "4 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "METAc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "METAc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $5,416,534 (ranked 3 of 12, median $2,315,281), NAV reference 638.54030616 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 5416534.07,
+        "float_rank": "3 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "MSFTc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "MSFTc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $1,408,773 (ranked 10 of 12, median $2,315,281), NAV reference 522.405 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 1408773.44,
+        "float_rank": "10 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "AAPLc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "AAPLc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $2,133,571 (ranked 8 of 12, median $2,315,281), NAV reference 355.585 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 2133571.37,
+        "float_rank": "8 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    },
+    {
+      "ticker": "AMZNc",
+      "view": "BUY",
+      "target_weight_pct": 11.1111,
+      "rationale": "AMZNc: no directional signal this cycle — momentum degenerate (momentum is +0.00% for every token — NAVs are frozen (market closed) and the previous snapshot was taken from the same frozen values, so momentum carries no cross-sectional information this cycle); supply-change degenerate (total supply change is +0.00% for every token — supplies are frozen with the market closed, so the signal carries no directional information this cycle). Posture rests on depth and freshness only: tokenized float $2,079,382 (ranked 9 of 12, median $2,315,281), NAV reference 265.44725 fresh at 0.0h market age. Equal-weight BUY candidate at low conviction until directional signals come live.",
+      "signals": {
+        "momentum_pct": 0.0,
+        "momentum_status": "degenerate",
+        "supply_change_pct": 0.0,
+        "supply_status": "degenerate",
+        "float_usd": 2079381.82,
+        "float_rank": "9 of 12",
+        "median_float_usd": 2315281.32,
+        "nav_stale": false,
+        "nav_market_age_h": 0.0,
+        "score": null,
+        "branch": "fallback_depth"
+      }
+    }
+  ]
+}
