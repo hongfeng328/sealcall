@@ -1,0 +1,53 @@
+{
+  "probe": "tokenized-stocks-api-smoke",
+  "fetched_at_utc": "2026-11-15T16:24:21.962985+00:00",
+  "base_url": "https://api.coinbase.com/v1/tokenized-stocks",
+  "staleness_threshold_seconds": 86400,
+  "total_tokens": 358,
+  "pages_fetched": 4,
+  "tokens_with_nav": 12,
+  "samples": [
+    {
+      "symbol": "TSLAc",
+      "name": "Tesla Inc.",
+      "contract_address": "0xb2000000000000000000001e800a7f5189430cD0",
+      "nav": {
+        "present": true,
+        "nav_price": 387.793,
+        "nav_price_updated_at": "2026-11-13T21:32:29Z",
+        "age_seconds": 154313.0,
+        "is_fresh": false
+      },
+      "metadata_ok": true,
+      "total_supply_response": 6432.88183743
+    },
+    {
+      "symbol": "NVDAc",
+      "name": "NVIDIA Corporation",
+      "contract_address": "0xb20000000000000000000078ee7ce2fE4908108C",
+      "nav": {
+        "present": true,
+        "nav_price": 160.76543559,
+        "nav_price_updated_at": "2026-11-13T23:36:23Z",
+        "age_seconds": 146879.0,
+        "is_fresh": false
+      },
+      "metadata_ok": true,
+      "total_supply_response": 49255.60410884
+    },
+    {
+      "symbol": "AAPLc",
+      "name": "Apple Inc.",
+      "contract_address": "0xb200000000000000000000C2e324d24d7eEcd1fb",
+      "nav": {
+        "present": true,
+        "nav_price": 355.585,
+        "nav_price_updated_at": "2026-11-13T21:05:53Z",
+        "age_seconds": 155909.0,
+        "is_fresh": false
+      },
+      "metadata_ok": true,
+      "total_supply_response": 6000.17259753
+    }
+  ]
+}
