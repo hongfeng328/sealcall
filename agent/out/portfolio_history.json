@@ -1089,5 +1089,214 @@
     ],
     "valued_at": "2026-11-17T01:42:39.571052+00:00",
     "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
+  },
+  {
+    "kind": "paper_portfolio_nav_valued",
+    "start_cash_usd": 100000.0,
+    "cash_usd": 0.0,
+    "invested_usd": 100038.04,
+    "total_value_usd": 100038.04,
+    "holdings": [
+      {
+        "ticker": "AAPLc",
+        "weight_pct": 10.0,
+        "nav_price": 350.52030889,
+        "nav_updated_at": "2026-11-17T21:21:15Z",
+        "units": 28.242517,
+        "value_usd": 9899.58
+      },
+      {
+        "ticker": "AMZNc",
+        "weight_pct": 10.0,
+        "nav_price": 260.495,
+        "nav_updated_at": "2026-11-17T23:01:53Z",
+        "units": 38.609865,
+        "value_usd": 10057.68
+      },
+      {
+        "ticker": "GOOGLc",
+        "weight_pct": 10.0,
+        "nav_price": 283.49787203,
+        "nav_updated_at": "2026-11-17T23:29:37Z",
+        "units": 35.138605,
+        "value_usd": 9961.72
+      },
+      {
+        "ticker": "METAc",
+        "weight_pct": 10.0,
+        "nav_price": 621.6634917,
+        "nav_updated_at": "2026-11-18T01:10:29Z",
+        "units": 15.948732,
+        "value_usd": 9914.74
+      },
+      {
+        "ticker": "MSFTc",
+        "weight_pct": 10.0,
+        "nav_price": 509.249,
+        "nav_updated_at": "2026-11-17T22:54:37Z",
+        "units": 19.196437,
+        "value_usd": 9775.77
+      },
+      {
+        "ticker": "MSTRc",
+        "weight_pct": 10.0,
+        "nav_price": 99.2255978,
+        "nav_updated_at": "2026-11-18T01:25:17Z",
+        "units": 97.224248,
+        "value_usd": 9647.13
+      },
+      {
+        "ticker": "NVDAc",
+        "weight_pct": 10.0,
+        "nav_price": 160.59113671,
+        "nav_updated_at": "2026-11-18T01:26:06Z",
+        "units": 63.639868,
+        "value_usd": 10220.0
+      },
+      {
+        "ticker": "SNDKc",
+        "weight_pct": 10.0,
+        "nav_price": 824.29781981,
+        "nav_updated_at": "2026-11-18T01:37:45Z",
+        "units": 12.21719,
+        "value_usd": 10070.6
+      },
+      {
+        "ticker": "SPCXc",
+        "weight_pct": 10.0,
+        "nav_price": 142.45747996,
+        "nav_updated_at": "2026-11-18T01:38:12Z",
+        "units": 72.679701,
+        "value_usd": 10353.77
+      },
+      {
+        "ticker": "TSLAc",
+        "weight_pct": 10.0,
+        "nav_price": 384.25,
+        "nav_updated_at": "2026-11-17T23:02:41Z",
+        "units": 26.381396,
+        "value_usd": 10137.05
+      }
+    ],
+    "valued_at": "2026-11-18T01:39:19.217366+00:00",
+    "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
+  },
+  {
+    "kind": "paper_portfolio_nav_valued",
+    "start_cash_usd": 100000.0,
+    "cash_usd": 0.0,
+    "invested_usd": 100000.0,
+    "total_value_usd": 100000.0,
+    "holdings": [
+      {
+        "ticker": "AMZNc",
+        "weight_pct": 50.0,
+        "nav_price": 260.495,
+        "nav_updated_at": "2026-11-17T23:01:53Z",
+        "units": 191.942264,
+        "value_usd": 50000.0
+      },
+      {
+        "ticker": "SPCXc",
+        "weight_pct": 50.0,
+        "nav_price": 142.45747996,
+        "nav_updated_at": "2026-11-18T01:38:12Z",
+        "units": 350.981921,
+        "value_usd": 50000.0
+      }
+    ],
+    "valued_at": "2026-11-18T01:39:19.217366+00:00",
+    "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
+  },
+  {
+    "kind": "paper_portfolio_nav_valued",
+    "start_cash_usd": 100000.0,
+    "cash_usd": 0.0,
+    "invested_usd": 100000.0,
+    "total_value_usd": 100000.0,
+    "holdings": [
+      {
+        "ticker": "AAPLc",
+        "weight_pct": 10.0,
+        "nav_price": 350.52030889,
+        "nav_updated_at": "2026-11-17T21:21:15Z",
+        "units": 28.529017,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "AMZNc",
+        "weight_pct": 10.0,
+        "nav_price": 260.495,
+        "nav_updated_at": "2026-11-17T23:01:53Z",
+        "units": 38.388453,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "GOOGLc",
+        "weight_pct": 10.0,
+        "nav_price": 283.49787203,
+        "nav_updated_at": "2026-11-17T23:29:37Z",
+        "units": 35.273633,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "METAc",
+        "weight_pct": 10.0,
+        "nav_price": 621.6634917,
+        "nav_updated_at": "2026-11-18T01:10:29Z",
+        "units": 16.085873,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "MSFTc",
+        "weight_pct": 10.0,
+        "nav_price": 509.249,
+        "nav_updated_at": "2026-11-17T22:54:37Z",
+        "units": 19.636759,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "MSTRc",
+        "weight_pct": 10.0,
+        "nav_price": 99.2255978,
+        "nav_updated_at": "2026-11-18T01:25:17Z",
+        "units": 100.780446,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "NVDAc",
+        "weight_pct": 10.0,
+        "nav_price": 160.59113671,
+        "nav_updated_at": "2026-11-18T01:26:06Z",
+        "units": 62.269937,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "SNDKc",
+        "weight_pct": 10.0,
+        "nav_price": 824.29781981,
+        "nav_updated_at": "2026-11-18T01:37:45Z",
+        "units": 12.131538,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "SPCXc",
+        "weight_pct": 10.0,
+        "nav_price": 142.45747996,
+        "nav_updated_at": "2026-11-18T01:38:12Z",
+        "units": 70.196384,
+        "value_usd": 10000.0
+      },
+      {
+        "ticker": "TSLAc",
+        "weight_pct": 10.0,
+        "nav_price": 384.25,
+        "nav_updated_at": "2026-11-17T23:02:41Z",
+        "units": 26.024723,
+        "value_usd": 10000.0
+      }
+    ],
+    "valued_at": "2026-11-18T01:39:23.886991+00:00",
+    "note": "Paper only: values are target weights x start cash, marked at the API NAV reference (not an execution price). Total equals start cash at inception by construction; later cycles re-mark holdings at fresh NAVs."
   }
 ]

@@ -1,74 +1,74 @@
 {
   "CRCLc": {
-    "nav_price": 57.36,
-    "nav_updated_at": "2026-11-16T23:33:12Z",
-    "total_supply": 2500.68953255,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 55.94311115,
+    "nav_updated_at": "2026-11-18T01:24:53Z",
+    "total_supply": 2596.7086402,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "TSLAc": {
-    "nav_price": 379.05499999,
-    "nav_updated_at": "2026-11-16T20:50:59Z",
-    "total_supply": 6399.15013742,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 384.25,
+    "nav_updated_at": "2026-11-17T23:02:41Z",
+    "total_supply": 6388.12122418,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "GOOGLc": {
-    "nav_price": 284.58728272,
-    "nav_updated_at": "2026-11-16T19:40:53Z",
-    "total_supply": 35641.90803758,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 283.49787203,
+    "nav_updated_at": "2026-11-17T23:29:37Z",
+    "total_supply": 36344.643023,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "SNDKc": {
-    "nav_price": 818.51885611,
-    "nav_updated_at": "2026-11-17T01:40:20Z",
-    "total_supply": 3090.03853669,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 824.29781981,
+    "nav_updated_at": "2026-11-18T01:37:45Z",
+    "total_supply": 2934.03853669,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "MSTRc": {
-    "nav_price": 102.855,
-    "nav_updated_at": "2026-11-16T23:32:54Z",
-    "total_supply": 20925.97804302,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 99.2255978,
+    "nav_updated_at": "2026-11-18T01:25:17Z",
+    "total_supply": 21195.97804302,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "INTCc": {
-    "nav_price": 54.3611367,
-    "nav_updated_at": "2026-11-17T01:40:28Z",
+    "nav_price": 56.01612457,
+    "nav_updated_at": "2026-11-18T01:25:16Z",
     "total_supply": 2670.39176823,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "NVDAc": {
-    "nav_price": 157.13420413,
-    "nav_updated_at": "2026-11-17T01:40:12Z",
-    "total_supply": 53389.38038687,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 160.59113671,
+    "nav_updated_at": "2026-11-18T01:26:06Z",
+    "total_supply": 52538.83792731,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "SPCXc": {
-    "nav_price": 137.59,
-    "nav_updated_at": "2026-11-16T21:42:10Z",
-    "total_supply": 27915.83393549,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 142.45747996,
+    "nav_updated_at": "2026-11-18T01:38:12Z",
+    "total_supply": 27805.44689215,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "METAc": {
-    "nav_price": 627.00908715,
-    "nav_updated_at": "2026-11-17T01:39:10Z",
-    "total_supply": 8482.68154474,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 621.6634917,
+    "nav_updated_at": "2026-11-18T01:10:29Z",
+    "total_supply": 8860.56296839,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "MSFTc": {
-    "nav_price": 520.93,
-    "nav_updated_at": "2026-11-16T23:02:16Z",
-    "total_supply": 2696.70741505,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 509.249,
+    "nav_updated_at": "2026-11-17T22:54:37Z",
+    "total_supply": 2855.70741505,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "AAPLc": {
-    "nav_price": 354.07608727,
-    "nav_updated_at": "2026-11-16T23:01:41Z",
-    "total_supply": 6034.1555928,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 350.52030889,
+    "nav_updated_at": "2026-11-17T21:21:15Z",
+    "total_supply": 6097.12408403,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   },
   "AMZNc": {
-    "nav_price": 259.00116629,
-    "nav_updated_at": "2026-11-17T01:41:09Z",
-    "total_supply": 8746.50295316,
-    "snapshot_at": "2026-11-17T01:42:39.571052+00:00"
+    "nav_price": 260.495,
+    "nav_updated_at": "2026-11-17T23:01:53Z",
+    "total_supply": 8907.50295316,
+    "snapshot_at": "2026-11-18T01:39:23.886991+00:00"
   }
 }
