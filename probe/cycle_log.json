@@ -1,58 +1,58 @@
 {
   "probe": "sealcall-daily-cycle",
-  "started_at_utc": "2026-11-19T01:39:45.942775+00:00",
+  "started_at_utc": "2026-11-20T01:39:05.392698+00:00",
   "network": "local eth-tester (py-evm) in-process chain — NOT an external network",
   "rounds": [
     {
       "round": 1,
-      "started_at_utc": "2026-11-19T01:39:46.767759+00:00",
+      "started_at_utc": "2026-11-20T01:39:05.548958+00:00",
       "engine": {
-        "generated_at": "2026-11-19T01:39:46.768125+00:00",
+        "generated_at": "2026-11-20T01:39:05.549263+00:00",
         "analyst": "signals-v1",
-        "universe_size": 12,
+        "universe_size": 13,
         "views": {
-          "BUY": 2,
+          "BUY": 1,
           "HOLD": 5,
-          "AVOID": 5
+          "AVOID": 7
         }
       },
-      "decisions": 12,
-      "commits": 12,
+      "decisions": 13,
+      "commits": 13,
       "commit_failures": [],
-      "commitment_count_onchain": 12,
+      "commitment_count_onchain": 13,
       "portfolio": {
-        "snapshots_before": 18,
-        "snapshots_after": 20,
+        "snapshots_before": 21,
+        "snapshots_after": 23,
         "appended_totals_usd": [
-          98732.07,
+          96125.19,
           100000.0
         ],
         "last_total_before_usd": 100000.0,
         "last_total_after_usd": 100000.0,
         "change_usd": 0.0
       },
-      "finished_at_utc": "2026-11-19T01:40:02.604437+00:00"
+      "finished_at_utc": "2026-11-20T01:39:11.919032+00:00"
     },
     {
       "round": 2,
-      "started_at_utc": "2026-11-19T01:40:02.606120+00:00",
+      "started_at_utc": "2026-11-20T01:39:11.919739+00:00",
       "engine": {
-        "generated_at": "2026-11-19T01:40:02.606402+00:00",
+        "generated_at": "2026-11-20T01:39:11.919919+00:00",
         "analyst": "signals-v1",
-        "universe_size": 12,
+        "universe_size": 13,
         "views": {
           "BUY": 10,
-          "HOLD": 0,
+          "HOLD": 1,
           "AVOID": 2
         }
       },
-      "decisions": 12,
-      "commits": 12,
+      "decisions": 13,
+      "commits": 13,
       "commit_failures": [],
-      "commitment_count_onchain": 24,
+      "commitment_count_onchain": 26,
       "portfolio": {
-        "snapshots_before": 20,
-        "snapshots_after": 21,
+        "snapshots_before": 23,
+        "snapshots_after": 24,
         "appended_totals_usd": [
           100000.0
         ],
@@ -60,7 +60,7 @@
         "last_total_after_usd": 100000.0,
         "change_usd": 0.0
       },
-      "finished_at_utc": "2026-11-19T01:40:20.486695+00:00"
+      "finished_at_utc": "2026-11-20T01:39:18.257696+00:00"
     }
   ],
   "errors": [],
@@ -70,6 +70,6 @@
     "deploy_block": 1,
     "agent_account": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf"
   },
-  "finished_at_utc": "2026-11-19T01:40:20.486735+00:00",
+  "finished_at_utc": "2026-11-20T01:39:18.257726+00:00",
   "verdict": "PASS"
 }
