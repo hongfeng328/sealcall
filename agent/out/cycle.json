@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T01:39:11.919919+00:00",
+  "generated_at": "2026-11-21T01:39:19.961395+00:00",
   "universe_size": 13,
   "universe": [
     "ANTc",
@@ -17,8 +17,8 @@
     "AMZNc"
   ],
   "views": {
-    "BUY": 10,
-    "HOLD": 1,
+    "BUY": 11,
+    "HOLD": 0,
     "AVOID": 2
   },
   "analyst": "signals-v1",
