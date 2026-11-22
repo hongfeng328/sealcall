@@ -6,7 +6,7 @@
     "isin": "US03703U1079",
     "nav_price": 87.595,
     "nav_updated_at": "2026-11-21T00:56:41Z",
-    "nav_age_seconds": 2558.961395,
+    "nav_age_seconds": 88950.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -16,8 +16,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Anthropic, PBC (ANTc): NAV reference 87.595 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:56:41Z (0.7h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 14935.96406155; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Anthropic, PBC (ANTc): NAV reference 87.595 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:56:41Z (24.7h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 14935.96406155; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "CRCLc",
@@ -26,7 +26,7 @@
     "isin": "US1725731079",
     "nav_price": 48.795,
     "nav_updated_at": "2026-11-21T00:12:04Z",
-    "nav_age_seconds": 5235.961395,
+    "nav_age_seconds": 91627.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -36,8 +36,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Circle Internet Group Inc. (CRCLc): NAV reference 48.795 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:12:04Z (1.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 3215.89041742; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Circle Internet Group Inc. (CRCLc): NAV reference 48.795 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:12:04Z (25.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 3215.89041742; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "TSLAc",
@@ -46,7 +46,7 @@
     "isin": "US88160R1014",
     "nav_price": 350.45,
     "nav_updated_at": "2026-11-20T22:43:49Z",
-    "nav_age_seconds": 10530.961395,
+    "nav_age_seconds": 96922.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -56,8 +56,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Tesla Inc. (TSLAc): NAV reference 350.45 (Chainlink reference value, not a live quote), last updated 2026-11-20T22:43:49Z (2.9h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 6527.32389899; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Tesla Inc. (TSLAc): NAV reference 350.45 (Chainlink reference value, not a live quote), last updated 2026-11-20T22:43:49Z (26.9h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 6527.32389899; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "GOOGLc",
@@ -66,12 +66,12 @@
     "isin": "US02079K3059",
     "nav_price": 269.71567647,
     "nav_updated_at": "2026-11-20T21:42:19Z",
-    "nav_age_seconds": 14220.961395,
+    "nav_age_seconds": 100612.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
     "nav_max_market_age_seconds": 14400,
-    "total_supply": 37201.31995397,
+    "total_supply": 37248.30223607,
     "multiplier": 1.0003771186767842,
     "corporate_actions": [
       {
@@ -83,8 +83,8 @@
     ],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Alphabet Inc. (GOOGLc): NAV reference 269.71567647 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:42:19Z (4.0h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 37201.31995397; share-to-token multiplier 1.0003771186767842. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Alphabet Inc. (GOOGLc): NAV reference 269.71567647 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:42:19Z (27.9h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 37248.30223607; share-to-token multiplier 1.0003771186767842. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "SNDKc",
@@ -93,7 +93,7 @@
     "isin": "US80004C2008",
     "nav_price": 649.44,
     "nav_updated_at": "2026-11-20T23:38:55Z",
-    "nav_age_seconds": 7224.961395,
+    "nav_age_seconds": 93616.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -110,8 +110,8 @@
     ],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Sandisk Corporation (SNDKc): NAV reference 649.44 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:38:55Z (2.0h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 3330.03853669; share-to-token multiplier 8. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Sandisk Corporation (SNDKc): NAV reference 649.44 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:38:55Z (26.0h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 3330.03853669; share-to-token multiplier 8. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "MSTRc",
@@ -120,18 +120,18 @@
     "isin": "US5949724083",
     "nav_price": 79.37,
     "nav_updated_at": "2026-11-21T00:08:11Z",
-    "nav_age_seconds": 5468.961395,
+    "nav_age_seconds": 91860.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
     "nav_max_market_age_seconds": 14400,
-    "total_supply": 24261.97804302,
+    "total_supply": 23080.97804302,
     "multiplier": 1,
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Strategy Inc. (MSTRc): NAV reference 79.37 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:08:11Z (1.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 24261.97804302; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Strategy Inc. (MSTRc): NAV reference 79.37 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:08:11Z (25.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 23080.97804302; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "INTCc",
@@ -140,7 +140,7 @@
     "isin": "US4581401001",
     "nav_price": 52.915,
     "nav_updated_at": "2026-11-20T23:50:55Z",
-    "nav_age_seconds": 6504.961395,
+    "nav_age_seconds": 92896.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -150,8 +150,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Intel Corporation (INTCc): NAV reference 52.915 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:50:55Z (1.8h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 2990.3600078; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Intel Corporation (INTCc): NAV reference 52.915 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:50:55Z (25.8h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 2990.3600078; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "NVDAc",
@@ -160,7 +160,7 @@
     "isin": "US67066G1040",
     "nav_price": 129.82480034,
     "nav_updated_at": "2026-11-20T23:42:40Z",
-    "nav_age_seconds": 6999.961395,
+    "nav_age_seconds": 93391.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -177,8 +177,8 @@
     ],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "NVIDIA Corporation (NVDAc): NAV reference 129.82480034 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:42:40Z (1.9h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 62019.73777574; share-to-token multiplier 1.0005379395763694. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "NVIDIA Corporation (NVDAc): NAV reference 129.82480034 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:42:40Z (25.9h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 62019.73777574; share-to-token multiplier 1.0005379395763694. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "SPCXc",
@@ -187,7 +187,7 @@
     "isin": "US84615Q1031",
     "nav_price": 129.34,
     "nav_updated_at": "2026-11-20T21:52:02Z",
-    "nav_age_seconds": 13637.961395,
+    "nav_age_seconds": 100029.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -197,8 +197,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Space Exploration Technologies Corp. (SPCXc): NAV reference 129.34 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:52:02Z (3.8h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 30116.60889535; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Space Exploration Technologies Corp. (SPCXc): NAV reference 129.34 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:52:02Z (27.8h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 30116.60889535; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "METAc",
@@ -207,7 +207,7 @@
     "isin": "US30303M1027",
     "nav_price": 567.17792022,
     "nav_updated_at": "2026-11-20T21:15:17Z",
-    "nav_age_seconds": 15842.961395,
+    "nav_age_seconds": 102234.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -224,8 +224,8 @@
     ],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Meta Platforms Inc. (METAc): NAV reference 567.17792022 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:15:17Z (4.4h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 9037.50744454; share-to-token multiplier 1.0003137922895982. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Meta Platforms Inc. (METAc): NAV reference 567.17792022 (Chainlink reference value, not a live quote), last updated 2026-11-20T21:15:17Z (28.4h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 9037.50744454; share-to-token multiplier 1.0003137922895982. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "MSFTc",
@@ -234,7 +234,7 @@
     "isin": "US5949181045",
     "nav_price": 489.199,
     "nav_updated_at": "2026-11-21T00:11:11Z",
-    "nav_age_seconds": 5288.961395,
+    "nav_age_seconds": 91680.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
@@ -244,8 +244,8 @@
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Microsoft Corporation (MSFTc): NAV reference 489.199 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:11:11Z (1.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 2702.70741505; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Microsoft Corporation (MSFTc): NAV reference 489.199 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:11:11Z (25.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 2702.70741505; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "AAPLc",
@@ -254,12 +254,12 @@
     "isin": "US0378331005",
     "nav_price": 345.29769685,
     "nav_updated_at": "2026-11-20T23:12:02Z",
-    "nav_age_seconds": 8837.961395,
+    "nav_age_seconds": 95229.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
     "nav_max_market_age_seconds": 14400,
-    "total_supply": 6103.12108319,
+    "total_supply": 6067.1390882,
     "multiplier": 1.0005003893019802,
     "corporate_actions": [
       {
@@ -271,8 +271,8 @@
     ],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Apple Inc. (AAPLc): NAV reference 345.29769685 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:12:02Z (2.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 6103.12108319; share-to-token multiplier 1.0005003893019802. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Apple Inc. (AAPLc): NAV reference 345.29769685 (Chainlink reference value, not a live quote), last updated 2026-11-20T23:12:02Z (26.5h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 6067.1390882; share-to-token multiplier 1.0005003893019802. Corporate-action signals: multiplier_adjustment. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   },
   {
     "ticker": "AMZNc",
@@ -281,17 +281,17 @@
     "isin": "US0231351067",
     "nav_price": 250.879,
     "nav_updated_at": "2026-11-21T00:23:57Z",
-    "nav_age_seconds": 4522.961395,
+    "nav_age_seconds": 90914.202972,
     "nav_stale": false,
     "nav_freshness_policy": "nyse-calendar-v1",
     "nav_market_age_seconds": 0.0,
     "nav_max_market_age_seconds": 14400,
-    "total_supply": 10411.50295316,
+    "total_supply": 10198.50295316,
     "multiplier": 1,
     "corporate_actions": [],
     "momentum_pct": 0.0,
     "supply_change_pct": 0.0,
-    "brief_text": "Amazon.com Inc. (AMZNc): NAV reference 250.879 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:23:57Z (1.3h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 10411.50295316; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
-    "generated_at": "2026-11-21T01:39:19.961395+00:00"
+    "brief_text": "Amazon.com Inc. (AMZNc): NAV reference 250.879 (Chainlink reference value, not a live quote), last updated 2026-11-21T00:23:57Z (25.3h wall age, 0.0h market-open age, stale=False per nyse-calendar-v1). Token supply 10198.50295316; share-to-token multiplier 1. No corporate-action signals observable in API data. NAV momentum vs previous engine snapshot: +0.00%. Total supply change vs previous snapshot: +0.00%.",
+    "generated_at": "2026-11-22T01:39:11.202972+00:00"
   }
 ]
