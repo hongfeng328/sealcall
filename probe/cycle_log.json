@@ -1,19 +1,19 @@
 {
   "probe": "sealcall-daily-cycle",
-  "started_at_utc": "2026-11-26T01:39:15.434798+00:00",
+  "started_at_utc": "2026-11-27T01:38:55.419583+00:00",
   "network": "local eth-tester (py-evm) in-process chain — NOT an external network",
   "rounds": [
     {
       "round": 1,
-      "started_at_utc": "2026-11-26T01:39:15.576175+00:00",
+      "started_at_utc": "2026-11-27T01:38:55.530204+00:00",
       "engine": {
-        "generated_at": "2026-11-26T01:39:15.576549+00:00",
+        "generated_at": "2026-11-27T01:38:55.530534+00:00",
         "analyst": "signals-v1",
         "universe_size": 13,
         "views": {
           "BUY": 2,
-          "HOLD": 8,
-          "AVOID": 3
+          "HOLD": 9,
+          "AVOID": 2
         }
       },
       "decisions": 13,
@@ -21,28 +21,28 @@
       "commit_failures": [],
       "commitment_count_onchain": 13,
       "portfolio": {
-        "snapshots_before": 38,
-        "snapshots_after": 40,
+        "snapshots_before": 41,
+        "snapshots_after": 43,
         "appended_totals_usd": [
-          101057.03,
+          100666.17,
           100000.0
         ],
         "last_total_before_usd": 100000.0,
         "last_total_after_usd": 100000.0,
         "change_usd": 0.0
       },
-      "finished_at_utc": "2026-11-26T01:39:24.917440+00:00"
+      "finished_at_utc": "2026-11-27T01:39:04.840144+00:00"
     },
     {
       "round": 2,
-      "started_at_utc": "2026-11-26T01:39:24.918557+00:00",
+      "started_at_utc": "2026-11-27T01:39:04.841321+00:00",
       "engine": {
-        "generated_at": "2026-11-26T01:39:24.918825+00:00",
+        "generated_at": "2026-11-27T01:39:04.841523+00:00",
         "analyst": "signals-v1",
         "universe_size": 13,
         "views": {
-          "BUY": 11,
-          "HOLD": 0,
+          "BUY": 0,
+          "HOLD": 11,
           "AVOID": 2
         }
       },
@@ -51,8 +51,8 @@
       "commit_failures": [],
       "commitment_count_onchain": 26,
       "portfolio": {
-        "snapshots_before": 40,
-        "snapshots_after": 41,
+        "snapshots_before": 43,
+        "snapshots_after": 44,
         "appended_totals_usd": [
           100000.0
         ],
@@ -60,7 +60,7 @@
         "last_total_after_usd": 100000.0,
         "change_usd": 0.0
       },
-      "finished_at_utc": "2026-11-26T01:39:33.358068+00:00"
+      "finished_at_utc": "2026-11-27T01:39:11.867526+00:00"
     }
   ],
   "errors": [],
@@ -70,6 +70,6 @@
     "deploy_block": 1,
     "agent_account": "0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf"
   },
-  "finished_at_utc": "2026-11-26T01:39:33.358099+00:00",
+  "finished_at_utc": "2026-11-27T01:39:11.867558+00:00",
   "verdict": "PASS"
 }
